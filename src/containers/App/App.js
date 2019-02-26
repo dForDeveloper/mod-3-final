@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import { setIsLoading, setHasErrored, setPresidents } from '../../actions';
+import { PresidentsContainer } from '../../components/PresidentsContainer/PresidentsContainer';
 
 export class App extends Component {
   componentDidMount() {
@@ -23,9 +24,13 @@ export class App extends Component {
   }
 
   render() {
+    const { isLoading, hasErrored, presidents } = this.props;
     return (
       <div className="App">
         <h1>Presidents and Assholes</h1>
+        {isLoading && <h2>Loading...</h2>}
+        {hasErrored && <h2>{hasErrored}</h2>}
+        <PresidentsContainer presidents={presidents} />
       </div>
     );
   }
