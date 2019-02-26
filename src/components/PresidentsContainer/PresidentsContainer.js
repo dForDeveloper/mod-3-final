@@ -31,8 +31,8 @@ export class PresidentsContainer extends Component {
   render() {
     const { partyFilter } = this.state;
     return(
-      <section>
-        <select onChange={this.handleChange} value={partyFilter}>
+      <section className="PresidentsContainer">
+        <select onChange={this.handleChange} value={partyFilter} className="drop-down">
           <option value="All">All</option>
           <option value="No Party">No Party</option>
           <option value="Federalist">Federalist</option>

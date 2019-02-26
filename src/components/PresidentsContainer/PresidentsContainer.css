@@ -1,0 +1,10 @@
+.PresidentsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.drop-down {
+  grid-column: 1/5;
+  width: 50%;
+  margin: auto;
+}
